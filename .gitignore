@@ -1,0 +1,19 @@
+# Client 
+
+client/
+
+# WordPress
+
+# Arquivos gerados pelo WordPress
+CMS/wp-content/uploads/
+CMS/wp-content/plugins/
+CMS/wp-content/themes/
+CMS/db-data
+CMS/wp-data
+
+# Arquivos de configuração locais do WordPress
+CMS/wp-config.php
+
+# Arquivos de cache do WordPress
+CMS/wp-content/cache/
+CMS/wp-content/upgrade/
