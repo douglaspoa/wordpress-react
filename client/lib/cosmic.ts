@@ -1,7 +1,8 @@
 import { Post, GlobalData, Author } from './types';
 
 // Usando a variável de ambiente para o endpoint da API do CMS
-const CMS_ENDPOINT = process.env.CMS_ENDPOINT || 'http://localhost:8000/wp-json/wp/v2/';
+const CMS_ENDPOINT = process.env.CMS_ENDPOINT || 'http://host.docker.internal:8000/wp-json/wp/v2/';
+
 
 // Função para buscar dados da API do WordPress
 async function fetchWordPressData(endpoint: string) {
@@ -55,7 +56,7 @@ export async function getAllPosts(): Promise<Post[]> {
     }));
     return Promise.resolve(posts);
   } catch (error) {
-    console.log('Erro ao buscar todos os posts:', error);
+    console.log('Erro ao buscar todos os posts vv:', error, CMS_ENDPOINT);
   }
   return Promise.resolve([]);
 }
